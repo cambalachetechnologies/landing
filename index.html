@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cambalache Technologies</title>
   <link rel="icon" href="img/favicon.png" type="image/png">
@@ -99,7 +101,10 @@
 
 </style>
 
- <!-- Navbar -->
+</head>
+<body>
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
     <div class="container d-flex align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="#">
@@ -121,66 +126,122 @@
     </div>
   </nav>
 
-
-<section class="hero-section mt-5">
-    <div class="container">
-      <div class="row align-items-center">
-        
-                <div class="col-md-6">
-          <h1 class="fw-bold mb-3">Impulsá tu negocio con Salesforce CRM</h1>
-          <p class="lead mb-4">Somos Partner Certificado Salesforce LATAM y te ayudamos a implementar soluciones de ventas, marketing y servicio al cliente que transforman resultados reales.</p>
-                      <div class="d-flex justify-content-between mt-4" style="max-width: 400px;">
-            <img src="img/agentforce.png" alt="Icono 1" class="img-fluid" style="height:50px;">
-            <img src="img/salescloud.png" alt="Icono 2" class="img-fluid" style="height:50px;">
-            <img src="img/servicecloud.png" alt="Icono 3" class="img-fluid" style="height:50px;">
-            <img src="img/marketing.png" alt="Icono 4" class="img-fluid" style="height:50px;">
-            <img src="img/mulesoft.png" alt="Icono 5" class="img-fluid" style="height:50px;">
-            <img src="img/consumergoods.png" alt="Icono 6" class="img-fluid" style="height:50px;">
-            </div>
-        </div>         
-         
+  <!-- Hero -->
+  <section class="hero-section mt-5">
+    <div class="container">
+      <div class="row align-items-center">
         <div class="col-md-6">
-          <div class="p-4 bg-white rounded shadow-sm">
-            <h5 class="text-center mb-3">Obtené una demo sin costo</h5>
-            <form class="contact-form"
-                  action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6"
-                  method="POST">
+          <h1 class="fw-bold mb-3">Impulsá tu negocio con Salesforce CRM</h1>
+          <p class="lead mb-4">Somos Partner Certificado Salesforce LATAM y te ayudamos a implementar soluciones de ventas, marketing y servicio al cliente que transforman resultados reales.</p>
+        <!-- Íconos debajo del subtítulo -->
+            <div class="d-flex justify-content-between mt-4" style="max-width: 400px;">
+            <img src="img/agentforce.png" alt="Icono 1" class="img-fluid" style="height:50px;">
+            <img src="img/salescloud.png" alt="Icono 2" class="img-fluid" style="height:50px;">
+            <img src="img/servicecloud.png" alt="Icono 3" class="img-fluid" style="height:50px;">
+            <img src="img/marketing.png" alt="Icono 4" class="img-fluid" style="height:50px;">
+            <img src="img/mulesoft.png" alt="Icono 5" class="img-fluid" style="height:50px;">
+            <img src="img/consumergoods.png" alt="Icono 6" class="img-fluid" style="height:50px;">
+            </div>
+        </div>
+         <!-- Form --> 
+<div class="col-md-6">
+  <div class="p-4 bg-white rounded shadow-sm">
+    <h5 class="text-center mb-3">Obtené una demo sin costo</h5>
+    <form class="contact-form"
+          action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6"
+          method="POST">
 
-                            <input type="hidden" name="oid" value="00D5w000003XOQ6">
-              <input type="hidden" name="retURL" value="https://cambalachetechnologies.github.io/landing/subpaginas/gracias">
-              <input type="hidden" name="lead_source" value="Landing">
+      <!-- Campos obligatorios de Salesforce -->
+      <input type="hidden" name="oid" value="00D5w000003XOQ6">
+      <input type="hidden" name="retURL" value="https://cambalachetechnologies.github.io/landing/subpaginas/gracias">
+      <input type="hidden" name="lead_source" value="Landing">
 
-              <div class="row g-2">
-                <div class="col-md-6">
-                  <input type="text" name="first_name" class="form-control" placeholder="Nombre" required
-                          pattern="[A-Za-z\s]+" title="Ingrese solo letras">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" name="last_name" class="form-control" placeholder="Apellido" required
-                          pattern="[A-Za-z\s]+" title="Ingrese solo letras">
-                </div>
-                <div class="col-md-6">
-                  <input type="email" name="email" class="form-control" placeholder="Correo empresarial" required
-                          pattern="^[a-zA-Z0-9._%+-]+@(?!gmail\.com$)(?!yahoo\.com$)(?!hotmail\.com$)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                          title="Ingrese un correo empresarial, no se aceptan Gmail, Hotmail o Yahoo">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" name="company" class="form-control" placeholder="Empresa">
-                </div>
-                <div class="col-12">
-                  <textarea name="description" class="form-control" rows="3" placeholder="Mensaje"></textarea>
-                </div>
-              </div>
+      <div class="row g-2">
+        <div class="col-md-6">
+          <input type="text" name="first_name" class="form-control" placeholder="Nombre" required
+                 pattern="[A-Za-z\s]+" title="Ingrese solo letras">
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="last_name" class="form-control" placeholder="Apellido" required
+                 pattern="[A-Za-z\s]+" title="Ingrese solo letras">
+        </div>
+        <div class="col-md-6">
+          <input type="email" name="email" class="form-control" placeholder="Correo empresarial" required
+                 pattern="^[a-zA-Z0-9._%+-]+@(?!gmail\.com$)(?!yahoo\.com$)(?!hotmail\.com$)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                 title="Ingrese un correo empresarial, no se aceptan Gmail, Hotmail o Yahoo">
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="company" class="form-control" placeholder="Empresa">
+        </div>
+        <div class="col-12">
+          <textarea name="description" class="form-control" rows="3" placeholder="Mensaje"></textarea>
+        </div>
+      </div>
 
-              <div class="d-grid mt-3">
-                <button type="submit" class="btn btn-primary">Hablar con un especialista</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>     </div>   </section>
+      <div class="d-grid mt-3">
+        <button type="submit" class="btn btn-primary">Hablar con un especialista</button>
+      </div>
 
- <!-- Servicios -->
+    </form>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrusel -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h3 class="mb-4">Confían en nosotros</h3>
+    <div id="carouselClientes" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-around align-items-center">
+            <img src="img/maximstore.png" class="img-fluid" alt="Cliente 1" style="max-height:80px;">
+            <img src="img/multiradio.png" class="img-fluid" alt="Cliente 2" style="max-height:80px;">
+            <img src="img/quick.png" class="img-fluid" alt="Cliente 3" style="max-height:80px;">
+            <img src="img/vitalcan.png" class="img-fluid" alt="Cliente 4" style="max-height:80px;">
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-around align-items-center">
+            <img src="img/bibank.png" class="img-fluid" alt="Cliente 5" style="max-height:80px;">
+            <img src="img/cedisur.png" class="img-fluid" alt="Cliente 6" style="max-height:80px;">
+            <img src="img/claro.png" class="img-fluid" alt="Cliente 7" style="max-height:80px;">
+            <img src="img/eduardoberaza.png" class="img-fluid" alt="Cliente 8" style="max-height:80px;">
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-around align-items-center">
+            <img src="img/grupogrisi.png" class="img-fluid" alt="Cliente 9" style="max-height:80px;">
+            <img src="img/karcher.png" class="img-fluid" alt="Cliente 10" style="max-height:80px;">
+            <img src="img/lavirginia.png" class="img-fluid" alt="Cliente 11" style="max-height:80px;">
+            <img src="img/luker.png" class="img-fluid" alt="Cliente 12" style="max-height:80px;">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselClientes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselClientes" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Servicios -->
   <section id="servicios" class="py-5 bg-white">
     <div class="container text-center">
       <h3 class="mb-3">Servicios de Implementación Salesforce CRM</h3>
@@ -232,7 +293,7 @@
     </div>
   </section>
 
- <!-- Industrias -->
+  <!-- Industrias -->
   <section id="industrias" class="py-5">
     <div class="container">
       <h3 class="text-center mb-4">Soluciones Salesforce CRM por industria</h3>
@@ -296,8 +357,8 @@
           <div id="ind6" class="accordion-collapse collapse">
             <div class="accordion-body">Experiencias personalizadas, programas de fidelización y atención omnicanal.</div>
           </div>
-
- </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -308,16 +369,17 @@
     <div class="p-4 bg-white rounded shadow-sm">
       <h3 class="text-center mb-3">Descubrí cómo Salesforce CRM puede aumentar tus ventas en semanas</h3>
       <p class="text-center text-muted mb-4">+120 implementaciones exitosas en LATAM | Partner Certificado Salesforce</p>
-      
+
       <form class="contact-form"
             action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6"
             method="POST">
-  <!-- Campos obligatorios de Salesforce -->
+
+        <!-- Campos obligatorios de Salesforce -->
         <input type="hidden" name="oid" value="00D5w000003XOQ6">
         <input type="hidden" name="retURL" value="https://cambalachetechnologies.github.io/landing/subpaginas/gracias">
         <input type="hidden" name="lead_source" value="Landing">
 
-  <div class="row g-2">
+        <div class="row g-2">
           <div class="col-md-6">
             <input type="text" name="first_name" class="form-control" placeholder="Nombre" required
                    pattern="[A-Za-z\s]+" title="Ingrese solo letras">
@@ -337,13 +399,20 @@
           <div class="col-12">
             <textarea name="description" class="form-control" rows="3" placeholder="Mensaje"></textarea>
           </div>
+        </div>
 
-   <div class="d-grid mt-3">
+        <div class="d-grid mt-3">
           <button type="submit" class="btn btn-primary">Hablar con un especialista</button>
-    </form>
+        </div>
+
+      </form>
     </div>
   </div>
 </section>
+
+
+  <!-- Footer -->
+
 <!-- Footer -->
 <footer class="py-4 text-white">
   <div class="container">
@@ -355,6 +424,7 @@
         </div>
         <p>Somos tu partner estratégico Salesforce CRM para acelerar la transformación digital de tu empresa.</p>
         <div>
+
         </div>
       </div>
       <div class="col-md-6">
