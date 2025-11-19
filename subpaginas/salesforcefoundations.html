@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cambalache Technologies</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17528906790"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17528906790');
+</script>
+ <style>
+  body {
+    background-color: #ffffff;
+    color: #002b5b;
+  }
+
+  h1, h3, h5, p, .lead {
+    color: #002b5b;
+  }
+
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  .navbar-partner img {
+    height: 60px;
+    margin-left: 10px;
+  }
+
+/* Hero actualizado */
+.hero-section {
+  position: relative;
+  background: url('../img/background-2.jpg') center/cover no-repeat;
+  background-size: cover; /* asegurar que cubra todo */
+  padding: 100px 0;
+  color: white;
+  overflow: hidden; /* importante para que el overlay no genere scroll */
+}
+
+/* Overlay con degradado celeste suave a transparente */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to right, rgba(9, 32, 94, 0.953), rgba(91,184,255,0)); /* degradado suave */
+  z-index: 0;
+}
+
+/* Mantener el contenido por encima del overlay */
+.hero-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Forzar textos blancos dentro del hero */
+.hero-section h1,
+.hero-section p,
+.hero-section .lead {
+  color: white !important;
+}
+
+
+  /* Mantener formulario hero con fondo blanco */
+  .hero-section .bg-white {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  /* Form final color celeste clarito */
+  #contacto .p-4.bg-white {
+    background-color: #e8f4fd !important; /* celeste clarito */
+  }
+
+  .btn-primary {
+    background-color: #002b5b;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #004080;
+  }
+
+  footer {
+    background-color: #002b5b !important;
+  }
+
+  footer p {
+    color: white !important;
+  }
+
+  /* ESTILOS PARA LA SECCIÓN #LOGROS (FONDO OSCURO - SIN CAMBIOS) */
+  #logros.futuristic-section {
+    background: linear-gradient(135deg, #002b5b, #1b73c4);
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #logros.futuristic-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(27, 190, 255, 0.1), transparent 70%);
+    animation: rotateBackground 20s linear infinite;
+    opacity: 0.3;
+  }
+
+  @keyframes rotateBackground {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  #logros.futuristic-section h3,
+  #logros.futuristic-section p,
+  #logros.futuristic-section .lead {
+    color: white !important;
+  }
+  /* FIN ESTILOS #LOGROS (FONDO OSCURO) */
+
+
+  /* ESTILOS DE TARJETA NEÓN CLARA (para #servicios) */
+  #servicios {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #002b5b;
+  }
+
+  #servicios h3, #servicios p {
+    color: #002b5b;
+  }
+
+  #servicios .logro-card {
+    background-color: #f7f9fb; /* Fondo muy claro/celeste */
+    border: 1px solid rgba(0, 43, 91, 0.1); /* Borde sutil oscuro */
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+
+  #servicios .logro-card:hover {
+    transform: translateY(-5px); /* Menor elevación que la oscura */
+    box-shadow: 0 5px 20px rgba(27, 190, 255, 0.4), 0 0 5px rgba(27, 190, 255, 0.2); /* Sombra azul clara */
+  }
+
+  #servicios .logro-card .bi {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #002b5b; /* Color primario de la marca */
+    text-shadow: 0 0 5px #1b73c4; /* Sutil brillo azul claro */
+  }
+
+  #servicios .logro-card h5 {
+    color: #002b5b; /* Título color primario */
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  #servicios .logro-card p {
+    color: #3e5c80; /* Texto secundario más oscuro para legibilidad */
+  }
+  /* FIN ESTILOS DE TARJETA NEÓN CLARA */
+  
+  /* ESTILOS DE TARJETA NEÓN OSCURA (para #logros) */
+  #logros .logro-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  #logros .logro-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(27, 190, 255, 0.6);
+  }
+
+  #logros .logro-card .bi {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 5px #1b73c4, 0 0 15px #1b73c4, 0 0 30px #1b73c4;
+  }
+
+  #logros .logro-card h5 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  #logros .logro-card p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  /* FIN ESTILOS DE TARJETA NEÓN OSCURA */
+
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="../img/ctechlogo.png" alt="Cambalache Logo">
+      <span class="navbar-partner">
+        <img src="../img/partnerlogo.png" alt="Salesforce Partner Logo">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#pipeline">Proceso</a></li>
+        <li class="nav-item"><a class="nav-link" href="#foundations">Foundations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section class="hero-section mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="fw-bold mb-3">Desbloquea el potencial completo de Salesforce Gratis</h1>
+          <p class="lead mb-4">Salesforce Foundations: <br>El Upgrade GRATUITO que unifica Ventas, Servicio y Marketing.</p>
+        </div>
+         <div class="col-md-6">
+  <div class="p-4 bg-white rounded shadow-sm">
+    <h5 class="text-center mb-3">Obtené una demo sin costo</h5>
+    <form class="contact-form"
+          action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6"
+          method="POST">
+
+      <input type="hidden" name="oid" value="00D5w000003XOQ6">
+      <input type="hidden" name="retURL" value="https://cambalachetechnologies.github.io/landing/subpaginas/gracias">
+      <input type="hidden" name="lead_source" value="Landing">
+
+      <div class="row g-2">
+        <div class="col-md-6">
+          <input type="text" name="first_name" class="form-control" placeholder="Nombre" required
+                 pattern="[A-Za-z\s]+" title="Ingrese solo letras">
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="last_name" class="form-control" placeholder="Apellido" required
+                 pattern="[A-Za-z\s]+" title="Ingrese solo letras">
+        </div>
+        <div class="col-md-6">
+          <input type="email" name="email" class="form-control" placeholder="Correo empresarial" required
+                 pattern="^[a-zA-Z0-9._%+-]+@(?!gmail\.com$)(?!yahoo\.com$)(?!hotmail\.com$)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                 title="Ingrese un correo empresarial, no se aceptan Gmail, Hotmail o Yahoo">
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="company" class="form-control" placeholder="Empresa">
+        </div>
+        <div class="col-12">
+          <textarea name="description" class="form-control" rows="3" placeholder="Mensaje"></textarea>
+        </div>
+      </div>
+
+      <div class="d-grid mt-3">
+        <button type="submit" class="btn btn-primary">Hablar con un especialista</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="pipeline" class="py-5 bg-light">
+    <div class="container">
+      <h3 class="text-center mb-5 fw-bold">Nuestro proceso de implementación sencillo</h3>
+      
+      <div class="row justify-content-center">
+        
+        <div class="col-lg-3 col-md-6 mb-4 d-flex pipeline-step">
+          <div class="card p-4 text-center border-0 shadow-sm w-100">
+            <i class="bi bi-search" style="font-size: 2.5rem; color: #002b5b;"></i>
+            <h5 class="mt-3 fw-bold">1. Diagnóstico</h5>
+            <p class="text-muted small mb-0">Comprendemos tus desafíos actuales y las metas que quieres alcanzar.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 d-flex pipeline-step">
+          <div class="card p-4 text-center border-0 shadow-sm w-100">
+            <i class="bi bi-clipboard-data" style="font-size: 2.5rem; color: #002b5b;"></i>
+            <h5 class="mt-3 fw-bold">2. Evaluación</h5>
+            <p class="text-muted small mb-0">Diseñamos la solución de Salesforce Foundations que mejor se adapta a tu negocio.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 d-flex pipeline-step">
+          <div class="card p-4 text-center border-0 shadow-sm w-100">
+            <i class="bi bi-tools" style="font-size: 2.5rem; color: #002b5b;"></i>
+            <h5 class="mt-3 fw-bold">3. Implementación</h5>
+            <p class="text-muted small mb-0">Configuramos y desplegamos la plataforma de forma rápida y eficiente.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 d-flex pipeline-step">
+          <div class="card p-4 text-center border-0 shadow-sm w-100">
+            <i class="bi bi-people" style="font-size: 2.5rem; color: #002b5b;"></i>
+            <h5 class="mt-3 fw-bold">4. Adopción</h5>
+            <p class="text-muted small mb-0">Capacitación y soporte para asegurar que tu equipo maximice el uso de la herramienta.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="foundations" class="py-5">
+    <div class="container">
+      <h3 class="text-center mb-4 fw-bold">Desbloquea el potencial Salesforce Foundations</h3>
+      
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10 text-center">
+          <p class="lead">
+            <strong>¿Cansado de la desconexión de datos?</strong> <br>Foundations elimina los silos: obtén capacidades clave de Marketing, Comercio y Servicio, sin costes ni integraciones adicionales de software.
+          </p>
+        </div>
+      </div>
+      
+      <div class="row g-4 d-flex align-items-stretch"> 
+        
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card p-3 border-0 shadow-sm w-100">
+            <h5 class="fw-bold"><i class="bi bi-person-workspace text-primary me-2"></i>Agentforce</h5>
+            <ul class="list-unstyled mb-0 ms-3">
+              <li><i class="bi bi-check-lg text-success me-2"></i>Agentes de Ventas y Servicio Configurables</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Constructores de Agentes y Prompts (Mensajes)</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>200K créditos gratuitos para empezar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card p-3 border-0 shadow-sm w-100">
+            <h5 class="fw-bold"><i class="bi bi-currency-dollar text-primary me-2"></i>Sales Cloud</h5>
+            <ul class="list-unstyled mb-0 ms-3">
+              <li><i class="bi bi-check-lg text-success me-2"></i>Gestión de Negocios (Deal Management)</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Cotización (Quoting)</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Reuniones (Meetings)</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Consola de Ventas (Sales Console)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card p-3 border-0 shadow-sm w-100">
+            <h5 class="fw-bold"><i class="bi bi-headset text-primary me-2"></i>Service Cloud</h5>
+            <ul class="list-unstyled mb-0 ms-3">
+              <li><i class="bi bi-check-lg text-success me-2"></i>Gestión de Casos (Case Management)</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Base de Conocimiento (Knowledge)</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Macros</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Consola de Servicio (Service Console)</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Centro de Ayuda (Help Center)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card p-3 border-0 shadow-sm w-100">
+            <h5 class="fw-bold"><i class="bi bi-envelope-check text-primary me-2"></i>Marketing Cloud</h5>
+            <ul class="list-unstyled mb-0 ms-3">
+              <li><i class="bi bi-check-lg text-success me-2"></i>Constructor de correos electrónicos *drag-and-drop*</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Analíticas de email integradas</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>2,000 envíos de correo electrónico mensuales</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card p-3 border-0 shadow-sm w-100">
+            <h5 class="fw-bold"><i class="bi bi-cpu text-primary me-2"></i>Agentforce 360 Platform</h5>
+            <ul class="list-unstyled mb-0 ms-3">
+              <li><i class="bi bi-check-lg text-success me-2"></i>Licencia de inicio de sesión de Agentforce 360 Platform</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>Agentforce extendido a usuarios infrecuentes</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>600 inicios de sesión anuales con 30,000 créditos</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card p-3 border-0 shadow-sm w-100">
+            <h5 class="fw-bold"><i class="bi bi-database-check text-primary me-2"></i>Data 360</h5>
+            <ul class="list-unstyled mb-0 ms-3">
+              <li><i class="bi bi-check-lg text-success me-2"></i>Perfiles unificados</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>250K Créditos de Servicios de Datos</li>
+              <li><i class="bi bi-check-lg text-success me-2"></i>1 TB de Almacenamiento de Datos</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+  </section>
+
+   <section id="contacto" class="py-5 bg-white">
+  <div class="container">
+    <div class="p-4 bg-white rounded shadow-sm">
+      <h3 class="text-center mb-3">Descubrí cómo Salesforce CRM puede aumentar tus ventas en semanas</h3>
+      <p class="text-center text-muted mb-4">+120 implementaciones exitosas en LATAM | Partner Certificado Salesforce</p>
+
+      <form class="contact-form"
+            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6"
+            method="POST">
+
+        <input type="hidden" name="oid" value="00D5w000003XOQ6">
+        <input type="hidden" name="retURL" value="https://cambalachetechnologies.github.io/landing/subpaginas/gracias">
+        <input type="hidden" name="lead_source" value="Landing">
+
+        <div class="row g-2">
+          <div class="col-md-6">
+            <input type="text" name="first_name" class="form-control" placeholder="Nombre" required
+                   pattern="[A-Za-z\s]+" title="Ingrese solo letras">
+          </div>
+          <div class="col-md-6">
+            <input type="text" name="last_name" class="form-control" placeholder="Apellido" required
+                   pattern="[A-Za-z\s]+" title="Ingrese solo letras">
+          </div>
+          <div class="col-md-6">
+            <input type="email" name="email" class="form-control" placeholder="Correo empresarial" required
+                   pattern="^[a-zA-Z0-9._%+-]+@(?!gmail\.com$)(?!yahoo\.com$)(?!hotmail\.com$)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                   title="Ingrese un correo empresarial, no se aceptan Gmail, Hotmail o Yahoo">
+          </div>
+          <div class="col-md-6">
+            <input type="text" name="company" class="form-control" placeholder="Empresa">
+          </div>
+          <div class="col-12">
+            <textarea name="description" class="form-control" rows="3" placeholder="Mensaje"></textarea>
+          </div>
+        </div>
+
+        <div class="d-grid mt-3">
+          <button type="submit" class="btn btn-primary">Hablar con un especialista</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="py-4 text-white">
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col-md-6 d-flex flex-column align-items-start mb-3 mb-md-0">
+        <div class="mb-2">
+          <img src="../img/ctechlogo.png" height="40" alt="Cambalache Logo">
+          <img src="../img/partnerlogo.png" height="40" class="ms-2" alt="Salesforce Partner Logo">
+        </div>
+        <p>Somos tu partner estratégico Salesforce CRM para acelerar la transformación digital de tu empresa.</p>
+        <div>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h6>Contacto</h6>
+        <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i>hablemos@c-tech.com.ar</p>
+        <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+54 9 11 5124-6444</p>
+        <p><i class="bi bi-geo-alt-fill me-2"></i>Buenos Aires, Argentina</p>
+        <p class="mt-2"><a href="subpaginas/aviso-privacidad.html" class="text-white text-decoration-underline">Aviso de privacidad</a></p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <p class="mb-0">© 2025 Cambalache Technologies SAS. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.c360a.salesforce.com/beacon/c360a/c15ec11a-67b2-4fc5-a2ee-48101bd3c237/scripts/c360a.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
